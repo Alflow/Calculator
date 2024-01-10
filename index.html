@@ -4,8 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <h1>Simple calculator.</h1>
+    <h2>Alfredo Alberruche</h2>
+    <div class="mainZone">
+
+        <div class="calculator">
+            <div class="calculator_header">                
+                <div class="calculator_Title">
+                    <p>Calculadora</p>
+                </div>
+                <div class="calculator_window_options">
+                    <button class="window_option" id="minimize">_</button>
+                    <button class="window_option" id="maximize">|_|</button>
+                    <button class="window_option" id="close">X</button>
+                </div>
+            </div>
+            <div class="calculator_display">
+                <p class="calculator_result">02321156154</p>
+                <!-- <textarea class="calculator_result" resize="none">TEST TEST TEST</textarea> -->
+            </div>
+            <div class="button_box">
+                <div class="button_row">
+                    <button class="btn-operator" id="percentage">%</button>
+                    <button class="btn-operator" id="ce">CE</button>
+                    <button class="btn-operator" id="c">C</button>
+                    <button class="btn-operator" id="delete">Del</button>
+                </div>
+                <div class="button_row">
+                    <button class="btn-operator" id="1/x">1/x</button>
+                    <button class="btn-operator" id="pow">x^2</button>
+                    <button class="btn-operator" id="sqrt">sqrt</button>
+                    <button class="btn-operator" id="divide">/</button>
+                </div>
+                <div class="button_row">
+                    <button class="btn-number" id="7">7</button>
+                    <button class="btn-number" id="8">8</button>
+                    <button class="btn-number" id="9">9</button>
+                    <button class="btn-number" id="multiply">X</button>
+                </div>
+                <div class="button_row">
+                    <button class="btn-number" id="4">4</button>
+                    <button class="btn-number" id="5">5</button>
+                    <button class="btn-number" id="6">6</button>
+                    <button class="btn-operator" id="minus">-</button>
+                </div>
+                <div class="button_row">
+                    <button class="btn-number" id="1">1</button>
+                    <button class="btn-number" id="2">2</button>
+                    <button class="btn-number" id="3">3</button>
+                    <button class="btn-operator" id="plus">+</button>
+                </div>
+                <div class="button_row">
+                    <button class="btn-operator" id="negate">+/-</button>
+                    <button class="btn-number" id="0">0</button>
+                    <button class="btn-number" id=",">,</button>
+                    <button class="btn-operator" id="equal">=</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+
 </body>
 </html>
