@@ -207,5 +207,8 @@ h2 {
 
 /* FOOTER */
 .madeBy{
+  margin-top: -5rem;
+  font-size:1.4rem;
+  font-weight: 600;
     color: white;
 }
