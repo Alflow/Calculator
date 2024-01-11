@@ -36,7 +36,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   background-color: #f3f3f3;
-  width: 300px;
+  min-width: 350px;
   height: 70%;
   border-radius: 0.5rem;
   padding: 0.1rem;
@@ -108,6 +108,8 @@ h2 {
   width: 21%;
   height: 5vh;
   font-weight: 800;
+  cursor: pointer;
+  
 }
 .btn:hover {
   background: linear-gradient(145deg, #e1e1e1, #ffffff);
