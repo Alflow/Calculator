@@ -48,6 +48,7 @@
                 </li>
     </header>
 
+    <h2>Now: <span id="clock"></span></h2>
     <div class="mainZone">
         <h1>Simple calculator.</h1>
         <div class="calculator">
@@ -93,7 +94,7 @@
                     <button class="btn btn-number" id="9">9</button>
                     <button class="btn btn-number" id="multiply">X</button>
                 </div>
-                
+
                 <div class="button_row">
                     <button class="btn btn-number" id="4">4</button>
                     <button class="btn btn-number" id="5">5</button>
@@ -121,6 +122,23 @@
     <footer>
         <p class="madeBy"><i>Designed by Alfredo Alberruche</i></p>
     </footer>
+    
+    <script>
+        function updateTime() {
+        let targetElement = document.getElementById("clock");
+        let now = new Date().toLocaleTimeString();
+        targetElement.innerText = now;
+        }
+
+        timer = setInterval(() => {
+        updateTime();
+        }, 1000);
+
+        setTimeout(()=>{
+            clearInterval(timer)
+        }, 60000)
+
+    </script>
 </body>
 
 </html>
