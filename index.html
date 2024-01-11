@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
+
 <body>
     <h1>Simple calculator.</h1>
     <h2>Alfredo Alberruche</h2>
     <div class="mainZone">
 
         <div class="calculator">
-            <div class="calculator_header">                
+            <div class="calculator_header">
                 <div class="calculator_Title">
-                    <p>Calculadora</p>
+                    <span class="material-symbols-outlined">
+                        calculate
+                        </span>
+                        <p>Calculadora </p>
                 </div>
                 <div class="calculator_window_options">
-                    <button class="window_option" id="minimize">_</button>
-                    <button class="window_option" id="maximize">|_|</button>
-                    <button class="window_option" id="close">X</button>
+                    <button class="btn window_option" id="minimize"><span class="material-symbols-outlined">
+                        minimize
+                        </span></button>
+                    <button class="btn window_option" id="maximize"><span class="material-symbols-outlined">
+                        check_box_outline_blank
+                        </span></button>
+                    <button class="btn window_option" id="close"><span class="material-symbols-outlined">
+                        close
+                        </span></button>
                 </div>
             </div>
             <div class="calculator_display">
@@ -66,7 +79,7 @@
                     <button class="btn btn-number" id=",">,</button>
                     <button class="btn btn-operator" id="equals">=</button>
                 </div>
-                
+
             </div>
         </div>
 
@@ -75,4 +88,5 @@
 
 
 </body>
+
 </html>

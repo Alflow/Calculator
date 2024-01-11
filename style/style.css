@@ -40,6 +40,8 @@ h2 {
   border-radius: 0.5rem;
   padding: 0.1rem;
   gap: 0.1rem;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+
 }
 .calculator_header {
   display: flex;
@@ -53,10 +55,12 @@ h2 {
 }
 .calculator_Title {
   /* border: solid 1px blue; */
+  display: flex;
   width: 35%;
   font-size: 0.8rem;
   margin-left: 0.2rem;
   padding-left: 0.5rem;
+  align-items: center;
 }
 .calculator_window_options {
   display: flex;
@@ -95,15 +99,22 @@ h2 {
   justify-content: space-around;
 }
 .btn {
-  border-radius: 0.4rem;
+  border-radius: 0.2rem;
   background: linear-gradient(145deg, #ffffff, #e1e1e1);
-}
-.btn:active {
-  background: linear-gradient(145deg, #e1e1e1, #ffffff);
-  
-}
-.btn-operator,
-.btn-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 21%;
   height: 5vh;
+  font-weight: 800;
+}
+.btn:hover {
+    background: linear-gradient(145deg, #e1e1e1, #ffffff);
+  }
+.btn:active {
+  background: linear-gradient(145deg, #e1e1e1, #ffffff);
+}
+.window_option{
+    height: 100%;
+    width: 1.69rem;
 }
