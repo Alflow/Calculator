@@ -72,7 +72,9 @@
                 </div>
             </div>
             <div class="calculator_display">
-                <p class="calculator_result">02321156154</p>
+
+                <p class="calculator_temp" id="temp"></p>
+                <p class="calculator_result" id="result"></p>
             </div>
             <div class="button_box">
                 <div class="button_row">
@@ -92,7 +94,7 @@
                     <button class="btn btn-number" id="7">7</button>
                     <button class="btn btn-number" id="8">8</button>
                     <button class="btn btn-number" id="9">9</button>
-                    <button class="btn btn-number" id="multiply">X</button>
+                    <button class="btn btn-operator" id="multiply">*</button>
                 </div>
 
                 <div class="button_row">
@@ -110,7 +112,7 @@
                 <div class="button_row">
                     <button class="btn btn-operator" id="negate">+/-</button>
                     <button class="btn btn-number" id="0">0</button>
-                    <button class="btn btn-number" id=",">,</button>
+                    <button class="btn btn-number" id=",">.</button>
                     <button class="btn btn-operator" id="equals">=</button>
                 </div>
 
@@ -122,23 +124,7 @@
     <footer>
         <p class="madeBy"><i>Designed by Alfredo Alberruche</i></p>
     </footer>
-    
-    <script>
-        function updateTime() {
-        let targetElement = document.getElementById("clock");
-        let now = new Date().toLocaleTimeString();
-        targetElement.innerText = now;
-        }
-
-        timer = setInterval(() => {
-        updateTime();
-        }, 1000);
-
-        setTimeout(()=>{
-            clearInterval(timer)
-        }, 60000)
-
-    </script>
+    <script type="module" src="scripts/main/main.js"></script>
 </body>
 
 </html>
