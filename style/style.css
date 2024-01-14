@@ -80,6 +80,10 @@ h2 {
   border: solid 1px black;
   padding-right: 0.5rem;
 }
+.calculator_temp{
+  text-align: end;
+  font-size: .9375rem;
+}
 .calculator_result {
   font-size: 2rem;
   text-align: end;
