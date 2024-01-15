@@ -51,6 +51,9 @@ class Calculator {
             case "+/-":
               this.display.innerText = this.display.textContent * -1;
               break;
+            case "sqrt":
+              this.display.innerText = Math.sqrt(this.display.textContent);
+              break;
             case "x^2":
               this.display.innerText =
                 this.display.textContent * this.display.textContent;
