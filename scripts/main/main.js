@@ -1,4 +1,4 @@
-import { updateTime, timer, timeOut } from "../modules/timers.js";
+// import { updateTime, timer, timeOut } from "../modules/timers.js";
 class Calculator {
   constructor() {
     this.display = document.getElementById("result");
