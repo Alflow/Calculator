@@ -80,9 +80,9 @@ h2 {
   border: solid 1px black;
   padding-right: 0.5rem;
 }
-.calculator_temp{
+.calculator_temp {
   text-align: end;
-  font-size: .9375rem;
+  font-size: 0.9375rem;
 }
 .calculator_result {
   font-size: 2rem;
@@ -113,7 +113,6 @@ h2 {
   height: 5vh;
   font-weight: 800;
   cursor: pointer;
-  
 }
 .btn:hover {
   background: linear-gradient(145deg, #e1e1e1, #ffffff);
@@ -176,6 +175,7 @@ h2 {
 .nav li ul a:hover {
   background: rgba(0, 0, 0, 0.2);
 }
+
 /* Not Animated
   ============================== */
 .nav1 ul > li:hover ul {
@@ -206,13 +206,18 @@ h2 {
   transition: 350ms;
 }
 
-
-
-
 /* FOOTER */
-.madeBy{
+.madeBy {
   margin-top: -2rem;
-  font-size:1.4rem;
+  font-size: 1.4rem;
   font-weight: 600;
-    color: white;
+  color: white;
+}
+#clock {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.6rem;
 }
