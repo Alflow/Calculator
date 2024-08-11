@@ -1,4 +1,14 @@
-// import { updateTime, timer, timeOut } from "../modules/timers.js";
+
+
+import {
+  calc_add,
+  calc_substract,
+  calc_divide,
+  calc_multiply,
+  calc_square,
+  calc_squareRoot
+} from '../modules/modules.js';
+
 class Calculator {
   constructor() {
     this.display = document.getElementById("result");
@@ -35,28 +45,55 @@ class Calculator {
         if (button.classList.contains("btn-operator")) {
           switch (buttonSymbol) {
             case "=":
-              let operation =
-                this.tempDisplay.textContent + this.display.textContent;
-              //si hay una x como operación, la cambia por  un "*" para que se pueda utilizar un eval
-              operation = operation.replace("x", "*");
-              console.log("Operación: " + operation);
-              this.tempDisplay.innerText = operation;
-              this.display.innerText = eval(operation);
+              let num1 = parseFloat(this.tempDisplay.textContent);
+              let num2 = parseFloat(this.display.textContent);
+              let operator = this.tempDisplay.textContent.slice(-1);
+              let result;
+          
+              switch (operator) {
+                case "+":
+                  result = calc_add(num1, num2);
+                  break;
+                case "-":
+                  result = calc_substract(num1, num2);
+                  break;
+                case "/":
+                  result = calc_divide(num1, num2);
+                  break;
+                case "*":
+                  result = calc_multiply(num1, num2);
+                  break;
+                default:
+                  result = "Error";
+              }
+          
+              this.display.innerText = result;
+              this.tempDisplay.innerText = "";
+              this.operatorSubmitted = false;
               break;
-
+          
             case "CE":
               this.clearDisplay();
               this.clearTemp();
               break;
+            case "C":
+              this.display.innerText = 0;
+              break;
             case "+/-":
               this.display.innerText = this.display.textContent * -1;
               break;
-            case "sqrt":
-              this.display.innerText = Math.sqrt(this.display.textContent);
-              break;
             case "x^2":
+              this.display.innerText = calc_square(this.display.textContent);
+              break;
+            case "Del":
               this.display.innerText =
-                this.display.textContent * this.display.textContent;
+                this.display.innerText.slice(0, -1) || "0";
+              break;
+            case "sqrt":
+              this.display.innerText = calc_squareRoot(this.display.innerText);
+              break;
+            case "%":
+              this.display.innerText = parseFloat(this.display.innerText) / 100;
               break;
             // Agrega más casos según sea necesario
             default:
@@ -70,8 +107,14 @@ class Calculator {
                   this.display.innerText + buttonSymbol;
               }
           }
+          
           this.operatorSubmitted = true;
         } else if (button.classList.contains("btn-number")) {
+          // Verificar si el símbolo es un punto decimal
+          if (buttonSymbol === ".") {
+            if (this.display.innerText.includes(".")) return;
+          }
+
           // Maneja la entrada de números
           if (this.operatorSubmitted) {
             // Si se acaba de ingresar un operador, comienza un nuevo número
