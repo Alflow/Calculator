@@ -15,82 +15,80 @@
 </head>
 
 <body>
-
     <div class="mainZone">
         <h1>Simple calculator.</h1>
         <div class="calculator">
             <div class="calculator_header">
                 <div class="calculator_Title">
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined" aria-hidden="true">
                         calculate
                     </span>
-                    <p>Calculadora </p>
+                    <p>Calculadora</p>
                 </div>
                 <div class="calculator_window_options">
-                    <button class="btn window_option" id="minimize"><span class="material-symbols-outlined">
+                    <button class="btn window_option" id="minimize" aria-label="Minimize window">
+                        <span class="material-symbols-outlined">
                             minimize
-                        </span></button>
-                    <button class="btn window_option" id="maximize"><span class="material-symbols-outlined">
+                        </span>
+                    </button>
+                    <button class="btn window_option" id="maximize" aria-label="Maximize window">
+                        <span class="material-symbols-outlined">
                             check_box_outline_blank
-                        </span></button>
-                    <button class="btn window_option" id="close"><span class="material-symbols-outlined">
+                        </span>
+                    </button>
+                    <button class="btn window_option" id="close" aria-label="Close window">
+                        <span class="material-symbols-outlined">
                             close
-                        </span></button>
+                        </span>
+                    </button>
                 </div>
             </div>
             <div class="calculator_display">
-
                 <p class="calculator_temp" id="temp"></p>
-                <p class="calculator_result" id="result"></p>
+                <p class="calculator_result" id="result" aria-live="polite" aria-atomic="true">0</p>
             </div>
-            <div class="button_box">
-                <div class="button_row">
-                    <button class="btn btn-operator" id="percentage">%</button>
-                    <button class="btn btn-operator" id="clearEntry">CE</button>
-                    <button class="btn btn-operator" id="clear">C</button>
-                    <button class="btn btn-operator" id="backspace">Del</button>
+            <div class="button_box" role="grid">
+                <div class="button_row" role="row">
+                    <button class="btn btn-operator" id="percentage" aria-label="Percentage">%</button>
+                    <button class="btn btn-operator" id="clearEntry" aria-label="Clear entry">CE</button>
+                    <button class="btn btn-operator" id="clear" aria-label="Clear">C</button>
+                    <button class="btn btn-operator" id="backspace" aria-label="Backspace">Del</button>
                 </div>
-                <div class="button_row">
-                    <button class="btn btn-operator" id="inverse">1/x</button>
-                    <button class="btn btn-operator" id="square">x^2</button>
-                    <button class="btn btn-operator" id="squareRoot">sqrt</button>
-                    <button class="btn btn-operator" id="divide">/</button>
+                <div class="button_row" role="row">
+                    <button class="btn btn-operator" id="inverse" aria-label="Inverse">1/x</button>
+                    <button class="btn btn-operator" id="square" aria-label="Square">x^2</button>
+                    <button class="btn btn-operator" id="squareRoot" aria-label="Square root">sqrt</button>
+                    <button class="btn btn-operator" id="divide" aria-label="Divide">/</button>
                 </div>
-
-                <div class="button_row">
-                    <button class="btn btn-number" id="7">7</button>
-                    <button class="btn btn-number" id="8">8</button>
-                    <button class="btn btn-number" id="9">9</button>
-                    <button class="btn btn-operator" id="multiply">*</button>
+                <div class="button_row" role="row">
+                    <button class="btn btn-number" id="7" aria-label="Seven">7</button>
+                    <button class="btn btn-number" id="8" aria-label="Eight">8</button>
+                    <button class="btn btn-number" id="9" aria-label="Nine">9</button>
+                    <button class="btn btn-operator" id="multiply" aria-label="Multiply">*</button>
                 </div>
-
-                <div class="button_row">
-                    <button class="btn btn-number" id="4">4</button>
-                    <button class="btn btn-number" id="5">5</button>
-                    <button class="btn btn-number" id="6">6</button>
-                    <button class="btn btn-operator" id="substract">-</button>
+                <div class="button_row" role="row">
+                    <button class="btn btn-number" id="4" aria-label="Four">4</button>
+                    <button class="btn btn-number" id="5" aria-label="Five">5</button>
+                    <button class="btn btn-number" id="6" aria-label="Six">6</button>
+                    <button class="btn btn-operator" id="substract" aria-label="Subtract">-</button>
                 </div>
-                <div class="button_row">
-                    <button class="btn btn-number" id="1">1</button>
-                    <button class="btn btn-number" id="2">2</button>
-                    <button class="btn btn-number" id="3">3</button>
-                    <button class="btn btn-operator" id="add">+</button>
+                <div class="button_row" role="row">
+                    <button class="btn btn-number" id="1" aria-label="One">1</button>
+                    <button class="btn btn-number" id="2" aria-label="Two">2</button>
+                    <button class="btn btn-number" id="3" aria-label="Three">3</button>
+                    <button class="btn btn-operator" id="add" aria-label="Add">+</button>
                 </div>
-                <div class="button_row">
-                    <button class="btn btn-operator" id="negate">+/-</button>
-                    <button class="btn btn-number" id="0">0</button>
-                    <button class="btn btn-number" id=",">.</button>
-                    <button class="btn btn-operator" id="equals">=</button>
+                <div class="button_row" role="row">
+                    <button class="btn btn-operator" id="negate" aria-label="Negate">+/-</button>
+                    <button class="btn btn-number" id="0" aria-label="Zero">0</button>
+                    <button class="btn btn-number" id="decimal" aria-label="Decimal">.</button>
+                    <button class="btn btn-operator" id="equals" aria-label="Equals">=</button>
                 </div>
-
             </div>
         </div>
-
     </div>
-
     <footer>
         <p class="madeBy"><i>Designed by Alfredo Alberruche</i></p>
-        
     </footer>
     <script type="module" src="scripts/main/main.js"></script>
 </body>
