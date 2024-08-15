@@ -36,6 +36,8 @@ Decimal Point (.): Add a decimal point.
  ARIA Labels: All buttons and interactive elements have appropriate ARIA labels to support screen readers.
  Keyboard Navigation: The calculator can be fully operated using a keyboard.
 
+## Demo
+https://alflow.github.io/Calculator/
 
 ![Image Alt text](media/preview.PNG "Preview")
 
