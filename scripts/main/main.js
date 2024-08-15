@@ -12,6 +12,7 @@ class Calculator {
       this.display = document.getElementById("result");
       this.tempDisplay = document.getElementById("temp");
       this.initializeButtons();
+      this.initializeKeyboard();
       this.clearDisplay();
       this.clearTemp();
       this.operatorSubmitted = false;
@@ -40,41 +41,84 @@ class Calculator {
               const buttonSymbol = event.target.textContent;
 
               if (button.classList.contains("btn-operator")) {
-                  switch (buttonSymbol) {
-                      case "=":
-                          this.calculateResult();
-                          break;
-                      case "CE":
-                          this.clearDisplay();
-                          this.clearTemp();
-                          break;
-                      case "C":
-                          this.clearDisplay();
-                          break;
-                      case "+/-":
-                          this.negateValue();
-                          break;
-                      case "x^2":
-                          this.squareValue();
-                          break;
-                      case "Del":
-                          this.backspace();
-                          break;
-                      case "sqrt":
-                          this.squareRootValue();
-                          break;
-                      case "%":
-                          this.percentageValue();
-                          break;
-                      default:
-                          this.handleOperator(buttonSymbol);
-                  }
-                  this.operatorSubmitted = true;
+                  this.handleOperatorButton(buttonSymbol);
               } else if (button.classList.contains("btn-number")) {
                   this.handleNumber(buttonSymbol);
               }
           });
       });
+  }
+
+  initializeKeyboard() {
+      document.addEventListener("keydown", (event) => {
+          const key = event.key;
+
+          if (!isNaN(key) || key === ".") {
+              this.handleNumber(key);
+          } else if (["+", "-", "/", "*", "Enter", "=", "Backspace", "Escape", "%"].includes(key)) {
+              this.handleOperatorKey(key);
+          }
+      });
+  }
+
+  handleOperatorButton(buttonSymbol) {
+      switch (buttonSymbol) {
+          case "=":
+              this.calculateResult();
+              break;
+          case "CE":
+              this.clearDisplay();
+              this.clearTemp();
+              break;
+          case "C":
+              this.clearDisplay();
+              break;
+          case "+/-":
+              this.negateValue();
+              break;
+          case "x^2":
+              this.squareValue();
+              break;
+          case "Del":
+              this.backspace();
+              break;
+          case "sqrt":
+              this.squareRootValue();
+              break;
+          case "%":
+              this.percentageValue();
+              break;
+          default:
+              this.handleOperator(buttonSymbol);
+      }
+      this.operatorSubmitted = true;
+  }
+
+  handleOperatorKey(key) {
+      switch (key) {
+          case "Enter":
+          case "=":
+              this.calculateResult();
+              break;
+          case "Backspace":
+              this.backspace();
+              break;
+          case "Escape":
+              this.clearDisplay();
+              break;
+          case "+":
+          case "-":
+          case "/":
+          case "*":
+              this.handleOperator(key);
+              break;
+          case "%":
+              this.percentageValue();
+              break;
+          default:
+              break;
+      }
+      this.operatorSubmitted = true;
   }
 
   calculateResult() {
